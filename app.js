@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 const grid = document.querySelector('.grid')
+const displaySquares = document.querySelectorAll('.previous-grid div')
 let squares = Array.from(grid.querySelectorAll('div'))
 const width = 10
 const height =20 
@@ -125,7 +126,32 @@ function rotate() {
 }
 
 draw()
+// show previous tetromino is displaySquares
+const displayWidth = 4
+const displayIndex = 0
+let nextRandom = 0
 
+const smallTetrominos = [
+    [1, displayWidth+1, displayWidth*2+1, 2], //lTetromino
+    [0, displayWidth, displayWidth+1, displayWidth*2+1], //zTetromino
+    [1, displayWidth, displayWidth+1, displayWidth+2], //tTetromino
+    [0, 1, displayWidth, displayWidth+1], //oTetromino
+    [1, displayWidth+1, displayWidth*2+1, displayWidth*3+1] //iTetromino
+  ]
+
+//display the shape in the mini-grid display
+function displayShape() {
+    //remove any trace of a tetromino form the entire grid
+    displaySquares.forEach(square => {
+      square.classList.remove('block')
+      
+    })
+    smallTetrominos[nextRandom].forEach( index => {
+      displaySquares[displayIndex + index].classList.add('block')
+      
+    })
+  }
+displayShape()
 
 }
 
