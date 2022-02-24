@@ -5,10 +5,13 @@ div {
     width: 20px;
 }
 .grid {
-    background-color: blue;
+    
     height: 300px;
     width: 200px;
     display: flex;
     flex-wrap: wrap;
     
+}
+.block {
+    background-color: blue;
 }
