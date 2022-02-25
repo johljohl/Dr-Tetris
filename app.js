@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let nextRandom = 0
   let timerId
   let score = 0
+  let myMusic = new Audio ("sound/theme.mp3")
   const colors = [
     'orange',
     'red',
@@ -217,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       draw()
       timerId = setInterval(moveDown, 1000)
       nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+      myMusic.play(); myMusic.loop = true;
       displayShape()
     }
   })
