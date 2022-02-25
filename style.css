@@ -8,7 +8,11 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: black;
+  margin-left: 23px;
+  margin-top: 20px;
+  border: solid 13px;
+  border-color: purple;
 }
 
 .grid div {
@@ -27,10 +31,26 @@
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: black;
+  border: solid 10px;
+  border-color: purple;
 }
 
 .mini-grid div {
   height: 20px;
   width: 20px;
+}
+body {
+  background-image: url("img/dr.png");
+  background-repeat: no-repeat;
+  background-color: black;
+}
+button {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+h3 {
+  margin-left: 100px;
+  margin-top: 40px;
+  color: white;
 }
