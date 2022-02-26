@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   startBtn.addEventListener('click', () => {
     if (timerId) {
       clearInterval(timerId)
-      timerId = null
+      timerId = null; myMusic.pause();
     } else {
       draw()
       timerId = setInterval(moveDown, 1000)
